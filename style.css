@@ -1,0 +1,47 @@
+
+:root {
+    --medical-teal: #0D9488;
+    --soft-sky: #E0F2FE;
+    --safety-orange: #F59E0B;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+.bg-soft-mesh {
+    background-color: var(--soft-sky);
+    background-image: 
+        radial-gradient(at 0% 0%, #BAE6FD 0, transparent 50%), 
+        radial-gradient(at 100% 0%, #99F6E4 0, transparent 50%),
+        radial-gradient(at 50% 100%, #FEF3C7 0, transparent 50%);
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.prescribly-wiggle {
+    animation: wiggle 2s ease-in-out infinite;
+}
+
+.prescribly-bounce {
+    animation: bounce-slow 3s ease-in-out infinite;
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
